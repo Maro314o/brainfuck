@@ -83,7 +83,7 @@ func (code *Bf_source_code) remove_invalid_symbos(valid_symbol_set []Symbol) {
 	*code = temp_source_code
 
 }
-
+/*
 func (intermidiate_code *Intermidiate_code) collapse_value() {
 	var code_string []Token
 
@@ -109,6 +109,7 @@ func (intermidiate_code *Intermidiate_code) collapse_value() {
 
 	//offset the value of brackets
 }
+	*/
 func (code *Bf_source_code) into_intermidiate_code() Intermidiate_code {
 	var intermidiate_string []Token
 	var value int
