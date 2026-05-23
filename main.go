@@ -61,7 +61,7 @@ func (memory *Memory_vec) get_value_of_current_pointed_location() byte {
 }
 func (memory *Memory_vec) output_pointed_location() {
 	value := memory.get_value_of_current_pointed_location()
-	fmt.Print(value)
+	fmt.Print(string(value))
 }
 func (memory *Memory_vec) input_pointed_location() {
 	memory_addr := memory.get_address_of_current_pointed_location()
@@ -154,8 +154,8 @@ func (interpreter *Interpreter) excel_current_symbol(){
 func main() {
 
 	args := os.Args
-	if len(args) > 2 {
-		log.Panic("too many parameters")
+	if len(args) != 2 {
+		log.Panic("ERROR,pass the file path as the only parameter")
 	}
 	file_bytes, err := os.ReadFile(args[1])
 	if err != nil {
